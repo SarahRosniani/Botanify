@@ -13,7 +13,7 @@ const navbar = () => {
 
         <nav id="navmenu" className="navmenu">
         <ul>
-            <li><a href="#hero" class="">Beranda</a></li>
+            <li><a href="/" class="">Beranda</a></li>
             <li className="dropdown" id="dropdown-basic"><a href="#"><span>Fitur</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="#">Dropdown 1</a></li>
@@ -22,13 +22,13 @@ const navbar = () => {
                 <li><a href="#">Dropdown 4</a></li>
             </ul>
             </li>
-            <li><a href="#informasi">Informasi</a></li>
+            <li><a href="/blog">Informasi</a></li>
             <li><a href="#kontak">Kontak</a></li>
         </ul>
         <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a className="btn-login" href="#about">Login</a>
+        <a className="btn-login" href="#about">Download Aplikasi</a>
 
     </div>
     </header>

@@ -53,6 +53,7 @@
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
+    text-decoration: none;
 }
 
 .post-title1 {
@@ -306,4 +307,31 @@ ini isi container card nya yg di infoormasi lain
     gap: 2px;
     flex-direction: column;
     margin-left: 10PX;
+}
+
+.containerd {
+    display: flex;
+    align-items: center;
+}
+
+.content-flex {
+    display: flex;
+    align-items: flex-start; 
+    gap: 750px; 
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column; 
+}
+
+.social-links1.d-flex {
+    display: flex;
+    gap: 10px; 
+    flex-direction: row; 
+}
+
+.social-links1.d-flex a i {
+    font-size: 24px;
+    color: #FF7B54;
 }

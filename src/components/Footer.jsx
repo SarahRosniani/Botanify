@@ -25,29 +25,29 @@ const footer = () => {
                 <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Sitemap</h4>
                 <ul>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Fitur</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Informasi</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Kontak</a></li>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Fitur</a></li>
+                    <li><a href="#">Informasi</a></li>
+                    <li><a href="#">Kontak</a></li>
                 </ul>
                 </div>
 
                 <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Company</h4>
                 <ul>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Teams</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Karir</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Bantuan</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">API</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Bantuan</a></li>
+                    <li><a href="#">API</a></li>
                 </ul>
                 </div>
 
                 <div className="col-lg-2 col-md-3 footer-links">
                     <h4>Resources</h4>
                     <ul>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Marketplace</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Subscriptions</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Testimonials</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Subscriptions</a></li>
+                    <li><a href="#">Testimonials</a></li>
                     </ul>
                 </div>
 
