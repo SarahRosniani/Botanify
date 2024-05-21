@@ -16,38 +16,38 @@ const footer = () => {
                     <p>Botanify merupakan aplikasi karya anak bangsa. Botanify membantu anda menemukan penyakit pada tanaman anda</p>
                 </div>
                 <div className="social-links d-flex">
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i className="bi bi-linkedin"></i></a>
+                    <a href=""><i className="bi bi-facebook"></i></a>
+                    <a href=""><i className="bi bi-twitter"></i></a>
+                    <a href=""><i className="bi bi-instagram"></i></a>
                 </div>
             </div>
                 <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Sitemap</h4>
                 <ul>
                     <li><i className="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Fitur</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Informasi</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Kontak</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Fitur</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Informasi</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Kontak</a></li>
                 </ul>
                 </div>
 
                 <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Company</h4>
                 <ul>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Teams</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Karir</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Bantuan</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">API</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Teams</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Karir</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Bantuan</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">API</a></li>
                 </ul>
                 </div>
 
                 <div className="col-lg-2 col-md-3 footer-links">
                     <h4>Resources</h4>
                     <ul>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Marketplace</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Subscriptions</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="#">Testimonials</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Marketplace</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Subscriptions</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#">Testimonials</a></li>
                     </ul>
                 </div>
 
@@ -64,10 +64,10 @@ const footer = () => {
             </div>
         
         
-        <div className="container copyright text-left mt-4">
-            <p>© <span>2024 Botanify All right reserved.</span></p>
-            <p>12,290,526 <span>tanaman telah discan dalam 3 bulan</span></p>
-        </div>
+            <div className="container copyright text-left mt-4">
+                <p>© <span>2024 Botanify All right reserved.</span></p>
+                <p><span className="bold-text">12,290,526</span> <span>tanaman telah discan dalam 3 bulan</span></p>
+            </div>
         </div>
         </footer>
     </div>

@@ -1,6 +1,9 @@
 import { Routes, Route} from 'react-router-dom'
 import '../src/dist/css/main.css'
-import Navbar from './components/Navbar'
+import './dist/css/style.css'
+import './dist/css/d.css';
+import './dist/css/dt.css';
+import Navbar from './components/NavbarComp'
 import Footer from './components/Footer'
 import hero from './pages/Hero'
 import diagnosa from './pages/Diagnosa'
@@ -11,6 +14,9 @@ import pengingat from './pages/Pengingat'
 import Testimoni from './pages/Testimoni'
 import Blog_information from './pages/Blog_information'
 import Blog_detail from './pages/Blog_detail'
+import Upload from './upload/Upload';
+import Loading from './upload/Loading';
+import Result from './upload/Result';
 
 function App() {
   return <div>
@@ -25,6 +31,9 @@ function App() {
       <Route path="/testimoni" Component={Testimoni}/>
       <Route path="/blog" Component={Blog_information}/>
       <Route path="/detail" Component={Blog_detail}/>
+      <Route path="/upload" Component={Upload} />
+      <Route path="/loading" Component={Loading} />
+      <Route path="/result" Component={Result} />
 
     </Routes>
     <Footer />

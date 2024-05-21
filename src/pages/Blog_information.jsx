@@ -52,12 +52,12 @@ const Blog_information = () => {
         className="mb-3 custom-tabs">
         <Tab eventKey="lihat" title="Lihat Semua">
             <div>
-            <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
+            <Container>
                 <Row >
                     <Col className="mb-3" style={{ marginRight: '10px' }}>
                     <div className="testimonials1">
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -81,7 +81,7 @@ const Blog_information = () => {
                             </Card>
                         </Col>
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img2} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -106,7 +106,7 @@ const Blog_information = () => {
                         </Col>
 
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img3} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -160,7 +160,7 @@ const Blog_information = () => {
                             </Card>
                         </Col>
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card >
                                 <Card.Img variant="top" src={img5} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -185,7 +185,7 @@ const Blog_information = () => {
                         </Col>
 
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img6} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -215,7 +215,7 @@ const Blog_information = () => {
                     <Col className="mb-3" style={{ marginRight: '10px' }}>
                     <div className="testimonials1">
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img7} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -239,7 +239,7 @@ const Blog_information = () => {
                             </Card>
                         </Col>
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img8} />
                                 <Card.Body>
                                 <div className="tips-trick">
@@ -264,7 +264,7 @@ const Blog_information = () => {
                         </Col>
 
                         <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={img9} />
                                 <Card.Body>
                                 <div className="tips-trick">

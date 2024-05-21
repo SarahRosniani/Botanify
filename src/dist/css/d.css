@@ -1,19 +1,19 @@
 
 /*--------------------------------------------------------------
-# blogo Section
+# blog Section
 --------------------------------------------------------------*/
 .blog {
     background-color: #ECF8EF;
     --default-color: #000000;
     --heading-color: #000000;
     --contrast-color: #000000;
-    width: 88%;
+    width: 95%;
     border-radius: 1rem;
     margin-left: auto;
     margin-right: auto;
     min-height: 70vh;
     position: relative;
-    padding: 120px 0 60px 0;
+    padding: 120px 0 120px 0;
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -28,18 +28,17 @@
     width: 700px; 
     text-align: center; 
     color: #141916; 
-    font-size: 64px; 
+    font-size: 50px; 
     font-family: 'Plus Jakarta Sans'; 
     font-weight: 550; 
     line-height: 72px; 
     word-wrap: break-word;
     margin-left: 230px;
-    margin-top: 5px;
   }
   
   .blog p {
    color: #6D706F;
-   font-size: 18px;
+   font-size: 16px;
    font-family: Plus Jakarta Sans;
    font-weight: 400;
    line-height: 26px;
