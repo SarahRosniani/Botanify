@@ -9,6 +9,8 @@ import edukasi from './pages/Edukasi'
 import informasi from './pages/Informasi'
 import pengingat from './pages/Pengingat'
 import Testimoni from './pages/Testimoni'
+import Blog_information from './pages/Blog_information'
+import Blog_detail from './pages/Blog_detail'
 
 function App() {
   return <div>
@@ -21,6 +23,8 @@ function App() {
       <Route path="/informasi" Component={informasi}/>
       <Route path="/pengingat" Component={pengingat}/>
       <Route path="/testimoni" Component={Testimoni}/>
+      <Route path="/blog" Component={Blog_information}/>
+      <Route path="/detail" Component={Blog_detail}/>
 
     </Routes>
     <Footer />
