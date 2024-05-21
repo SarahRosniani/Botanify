@@ -3,15 +3,12 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 88%;
+    width: 95%;
     border-radius: 1rem;
     margin-left: 120px;
     margin-right: auto;
-    min-height: 70vh;
     position: relative;
-    padding: 120px 0 60px 0;
     z-index: 1;
-    margin-top: auto;
 }
 
 .blog-detail h1 {
@@ -296,8 +293,6 @@ ini isi container card nya yg di infoormasi lain
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
 }
 
 .metadata1 {
@@ -306,7 +301,6 @@ ini isi container card nya yg di infoormasi lain
     align-items: left;
     gap: 2px;
     flex-direction: column;
-    margin-left: 10PX;
 }
 
 .containerd {
@@ -334,4 +328,13 @@ ini isi container card nya yg di infoormasi lain
 .social-links1.d-flex a i {
     font-size: 24px;
     color: #FF7B54;
+}
+
+.card-body-custom1 {
+    height: auto;
+    width: 250px;
+  }
+
+  .card-text-left1 {
+    text-align: left;
 }

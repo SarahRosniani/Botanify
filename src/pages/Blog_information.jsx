@@ -51,40 +51,6 @@ const Blog_information = () => {
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-        </section>
-        <section className='blog1 section'>
-        <Tabs 
-        defaultActiveKey="lihat" 
-        transition={false}
-        id="noanim-tab-example" 
-        className="mb-3 custom-tabs">
-        <Tab eventKey="lihat" title="Lihat Semua">
-            <div>
-            <Container>
-                <Row >
-                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                    <div className="testimonials1">
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-=======
             </section>
             <section className='blog1 section'>
                 <Tabs 
@@ -94,472 +60,204 @@ const Blog_information = () => {
                     className="mb-3 custom-tabs">
                     <Tab eventKey="lihat" title="Lihat Semua">
                         <div>
-                            <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
+                            <Container>
                                 <Row>
-                                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                                        <div className="testimonials1">
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img2} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp2} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img3} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp3} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
->>>>>>> c3329a07fe78f33e8d46b31b3490151a17fd94e3
-                                        </div>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img2} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp2} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img3} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp3} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                                        <div className="testimonials1">
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img4} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp4} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img5} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp5} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img6} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp6} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                        </div>
-<<<<<<< HEAD
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img2} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp2} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img3} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp3} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </div>
-                    </Col>
-                </Row>
-                <Row >
-                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                    <div className="testimonials1">
-                        <Col className='mb-3'>
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={img4} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp4} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className='mb-3'>
-                            <Card >
-                                <Card.Img variant="top" src={img5} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp5} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img6} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp6} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </div>
-                    </Col>
-                </Row>
-                <Row >
-                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                    <div className="testimonials1">
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img7} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp7} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img8} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp8} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className='mb-3'>
-                            <Card>
-                                <Card.Img variant="top" src={img9} />
-                                <Card.Body>
-                                <div className="tips-trick">
-                                    Tips & Trick
-                                </div>
-                                    <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                    <Card.Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                    </Card.Text>
-                                    <div className="containerblog">
-                                        <img className="profile-img" src={imgp9} />
-                                        <div className='metadata'><div className="author-nameblog">Danica A.</div>
-                                        <div className="metadata-container">
-                                            <div className="date">11 Jan 2022</div>
-                                            <div className="divider"></div>
-                                            <div className="read-time">5 min read</div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </div>
-                    </Col>
-                </Row>
-            </Container>
-            </div>
-=======
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img4} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp4} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img5} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp5} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img6} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp6} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="mb-3" style={{ marginRight: '10px' }}>
-                                        <div className="testimonials1">
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img7} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp7} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img8} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp8} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col className='mb-3'>
-                                                <Card style={{ width: '18rem' }} onClick={handleCardClick}>
-                                                    <Card.Img variant="top" src={img9} />
-                                                    <Card.Body>
-                                                        <div className="tips-trick">
-                                                            Tips & Trick
-                                                        </div>
-                                                        <Card.Title>Cara mudah untuk merawat tanaman anda </Card.Title>
-                                                        <Card.Text>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
-                                                        </Card.Text>
-                                                        <div className="containerblog">
-                                                            <img className="profile-img" src={imgp9} />
-                                                            <div className='metadata'>
-                                                                <div className="author-nameblog">Danica A.</div>
-                                                                <div className="metadata-container">
-                                                                    <div className="date">11 Jan 2022</div>
-                                                                    <div className="divider"></div>
-                                                                    <div className="read-time">5 min read</div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </Card.Body>
-                                                </Card>
-                                            </Col>
-                                        </div>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img7} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp7} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick}>
+                                            <Card.Img variant="top" src={img8} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp8} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col md={4} className="mb-3">
+                                        <Card onClick={handleCardClick} >
+                                            <Card.Img variant="top" src={img9} />
+                                            <Card.Body className="card-body-custom">
+                                                <div className="tips-trick">Tips & Trick</div>
+                                                <Card.Title>Cara mudah untuk merawat tanaman anda</Card.Title>
+                                                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={imgp9} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">Danica A.</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">11 Jan 2022</div>
+                                                            <div className="divider"></div>
+                                                            <div className="read-time">5 min read</div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
                                     </Col>
                                 </Row>
                             </Container>
                         </div>
->>>>>>> c3329a07fe78f33e8d46b31b3490151a17fd94e3
                     </Tab>
                     <Tab eventKey="tips" title="Tips & Trick">
                         <div>Tab content for Tips & Trick</div>

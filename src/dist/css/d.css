@@ -3,21 +3,17 @@
 # blog Section
 --------------------------------------------------------------*/
 .blog {
-    background-color: #ECF8EF;
-    --default-color: #000000;
-    --heading-color: #000000;
-    --contrast-color: #000000;
-    width: 95%;
-    border-radius: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 70vh;
-    position: relative;
-    padding: 120px 0 120px 0;
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-    z-index: 1;
+  position: relative;
+  width: 95%;
+  border-radius: 0.7rem;
+  margin: 30px auto;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #D5F0DB;
+  z-index: 1;
   }
   
   /* .blogo-img{
@@ -112,17 +108,16 @@
 
 
 .blog1 {
-    width: 560px;
+    position: relative;
+    width: 95%;
+    border-radius: 0.7rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
     text-align: left;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin: 0 auto; 
-    padding: 80px 0 60px 0;
+    padding: 80px 0 10px 0;
     align-items: center; 
   }
 
@@ -154,11 +149,11 @@
     color: white;
 }
 
-
-
   .testimonials1 {
-    width: 1000px;
-    height: 440px;
+    position: relative;
+    width: 95%;
+    border-radius: 0.7rem;
+    padding: 200px 20px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -167,7 +162,7 @@
   }
   
   .testimonial1 {
-    width: 400px;
+    width: 95%;
     height: 268px;
     position: relative;
   }
@@ -183,10 +178,9 @@
 
   .containerblog {
     width: 100%;
-    display: flex;
+    display: contents;
     justify-content: flex-start;
     align-items: center;
-    gap: 16px;
 }
 
 .profile-img {
@@ -206,11 +200,8 @@
 }
 
 .metadata-container {
-    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .date,
@@ -227,16 +218,14 @@
     width: 3px;
     height: 3px;
     background: #C7C8C7;
-    border-radius: 9999px;
 }
 
-.metadata {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    gap: 2px;
-    flex-direction: column;
-    margin-left: 10PX;
+.metadata1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 2px;
+  flex-direction: column;
 }
 
 .tips-trick {
@@ -251,4 +240,15 @@
 
 .jad{
   width: 100;
+}
+
+.containerblog1 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-body-custom {
+  height: auto;
+  width: 250px;
 }

@@ -16,7 +16,7 @@ const navbar = () => {
             <li><a href="/" class="">Beranda</a></li>
             <li className="dropdown" id="dropdown-basic"><a href="#"><span>Fitur</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li><a href="#">Dropdown 1</a></li>
+                <li><a href="/upload">Upload</a></li>
                 <li><a href="#">Dropdown 2</a></li>
                 <li><a href="#">Dropdown 3</a></li>
                 <li><a href="#">Dropdown 4</a></li>

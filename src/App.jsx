@@ -3,7 +3,6 @@ import '../src/dist/css/main.css'
 import './dist/css/style.css'
 import './dist/css/d.css';
 import './dist/css/dt.css';
-import Navbar from './components/NavbarComp'
 import Footer from './components/Footer'
 import hero from './pages/Hero'
 import diagnosa from './pages/Diagnosa'
@@ -17,10 +16,12 @@ import Blog_detail from './pages/Blog_detail'
 import Upload from './upload/Upload';
 import Loading from './upload/Loading';
 import Result from './upload/Result';
+import NavbarComp from './components/NavbarComp';
+
 
 function App() {
   return <div>
-    <Navbar />
+    <NavbarComp />
     <Routes>
       <Route path="/" Component={hero}/>
       <Route path="/diagnosa" Component={diagnosa}/>

@@ -11,9 +11,9 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto navbar-links">
-            <Nav.Link href="#home" className="nav-link-custom">Beranda</Nav.Link>
+            <Nav.Link href="/" className="nav-link-custom">Beranda</Nav.Link>
             <NavDropdown title="Fitur" id="basic-nav-dropdown" className="nav-dropdown-custom">
-              <NavDropdown.Item href="#action/3.1">Unggah</NavDropdown.Item>
+              <NavDropdown.Item href="/upload">Unggah</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             </NavDropdown>
