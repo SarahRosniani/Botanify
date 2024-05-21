@@ -17,7 +17,7 @@ const BlogDetail = () => {
         <div className="blog-detail">
             <div className="title-section">
                 <div className="title">
-                    <div className="blog-category">Blog</div>
+                    <a href="/blog" className="blog-category">Blog</a>
                     <i className="bi bi-chevron-right small-icon"></i>
                     <div className="post-title">Tips & Trick</div>
                     <i className="bi bi-chevron-right small-icon"></i>
@@ -27,12 +27,20 @@ const BlogDetail = () => {
             <h1>Cara mudah untuk merawat tanaman anda</h1>
             <div className="containerd">
                 <img className="profile-img" src={img} alt="Author" />
-                <div className="metadata">
-                    <div className="author-name">Danica A.</div>
-                    <div className="metadata-container">
-                        <div className="date">11 Jan 2022</div>
-                        <div className="divider"></div>
-                        <div className="read-time">5 min read</div>
+                <div className="content-flex">
+                    <div className="metadata">
+                        <div className="author-name">Danica A.</div>
+                        <div className="metadata-container">
+                            <div className="date">11 Jan 2022</div>
+                            <div className="divider"></div>
+                            <div className="read-time">5 min read</div>
+                        </div>
+                    </div>
+                    <div className="social-links1 d-flex">
+                        <a href="#"><i className="bi bi-link-45deg"></i></a>
+                        <a href="#"><i className="bi bi-linkedin"></i></a>
+                        <a href="#"><i className="bi bi-twitter-x"></i></a>
+                        <a href="#"><i className="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>

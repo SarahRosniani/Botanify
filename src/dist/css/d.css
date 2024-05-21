@@ -77,7 +77,7 @@
   }
   
 
-.headerb {
+  .headerb {
     width: 350px;
     height: 35px;
     background-color: white;
@@ -85,25 +85,29 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 18px;
     z-index: 2;
     margin-left: 400px;
     padding-left: 12px;
 }
 
-.text {
-    flex: 1 1 0;
-    color: #6D706F;
-    font-size: 16px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
-    line-height: 24px;
-    word-wrap: break-word;
+.search-form {
+    display: flex;
+    align-items: center;
+    border:  #ccc; /* Contoh gaya border untuk input */
+    border-radius: 5px; /* Contoh gaya border-radius */
+    padding: 5px; /* Contoh ruang padding untuk input */
 }
 
 .icon {
+    margin-right: 5px; 
     color: #FF7B54;
     font-size: 1.2em;
+}
+
+.text {
+    border: none; /* Menghilangkan border pada input */
+    outline: none; /* Menghilangkan outline pada input saat difokus */
 }
 
 
