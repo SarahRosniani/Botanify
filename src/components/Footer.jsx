@@ -12,7 +12,7 @@ const footer = () => {
                     <a href="index.html" className="logo d-flex align-items-center me-auto ">
                         <Image src="/logo.png" alt="" />
                     </a>
-                <div className="footer-botanify pt-3">
+                <div className="footer-botanify">
                     <p>Botanify merupakan aplikasi karya anak bangsa. Botanify membantu anda menemukan penyakit pada tanaman anda</p>
                 </div>
                 <div className="social-links d-flex">
@@ -66,7 +66,7 @@ const footer = () => {
         
             <div className="container copyright text-left mt-4">
                 <p>© <span>2024 Botanify All right reserved.</span></p>
-                <p><span className="bold-text">12,290,526</span> <span>tanaman telah discan dalam 3 bulan</span></p>
+                <p><span className="bold-text">12,290,526  </span> <span> tanaman telah discan dalam 3 bulan</span></p>
             </div>
         </div>
         </footer>

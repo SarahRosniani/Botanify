@@ -12,7 +12,7 @@ const Informasi = () => {
                     <div className="row gy-5">
                         <div className="col-lg-5 d-flex flex-column justify-content-center">
                             <h1 className="title">Ketahui semua informasi tentang tanaman anda</h1>
-                            <p className="subtitle">Menambah wawasan anda tentang merawat tanaman anda hanya dalam satu genggaman</p>
+                            <p className="subtitle">Menambah wawasan anda tentang merawat tanaman <br/> anda hanya dalam satu genggaman</p>
                         </div>
                         <div className="col-lg-7 d-flex flex-wrap">
                             <div className="service-box">

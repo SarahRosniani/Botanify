@@ -22,13 +22,13 @@ const Hero = () => {
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-              <h1 className="">
+              <h1 className="underline-text22">
                 Pantau kesehatan tanaman anda dalam sekali potret
-                <div className="underline-container">
-                  <img src={Underline1} alt="underline" className="underline-img" />
+                <div className="underline-container22">
+                  <img src={Underline1} alt="underline" className="underline-img22" />
                 </div>
-                <div className="underline-container2">
-                  <img src={Underline2} alt="underline" className="underline-img2" />
+                <div className="underline-container00">
+                  <img src={Underline2} alt="underline" className="underline-img00" />
                 </div>
               </h1>
               <p className="">

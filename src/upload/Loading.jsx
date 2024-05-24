@@ -1,4 +1,5 @@
-import '../dist/css/style.css';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import img5 from '../assets/unggah.png';
 import img6 from '../assets/loading.png';
 import img7 from '../assets/hasil.png';
@@ -7,6 +8,32 @@ import Underline1 from '../assets/Vector 1.png';
 import Underline2 from '../assets/Vector 2.png';
 
 const Loading = () => {
+  const [percentage, setPercentage] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercentage(prev => {
+        if (prev < 100) {
+          return prev + 1;
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+    }, 100); 
+
+    const timer = setTimeout(() => {
+      navigate('/result');
+    }, 5000); 
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, [navigate]);
+
+
   return (
     <div>
       <header className="upload">
@@ -37,7 +64,7 @@ const Loading = () => {
                   fontSize: '20px',
                   color: 'green'
                 }}>
-                  25%
+                  {percentage}%
                 </div>
               </div>
               <h2>Mohon bersabar</h2>

@@ -17,12 +17,12 @@ const pengingat = () => {
                             src={img}
                         />
                     </Figure>
-                <div class="row gy-4">
-                    <div class="col-lg-10 order-5 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 class="">Atur pengingat untuk jadwal penyiraman tanaman anda</h1>
-                        <p class="">Tentukan jadwal penyiraman secara rutin sehingga anda tidak lupa untuk menyiram tanaman anda</p>
-                        <div class="d-flex">
-                            <a href="#" class="btn-coba1">Coba Sekarang</a>
+                <div className="row gy-4">
+                    <div className="col-lg-10 order-5 order-lg-1 d-flex flex-column justify-content-center">
+                        <h1 className="">Atur pengingat untuk jadwal penyiraman tanaman anda</h1>
+                        <p className="">Tentukan jadwal penyiraman secara rutin sehingga anda tidak lupa untuk menyiram tanaman anda</p>
+                        <div className="d-flex">
+                            <a href="#" className="btn-coba1">Coba Sekarang</a>
                         </div>
                     </div>
                 </div>

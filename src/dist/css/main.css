@@ -397,6 +397,10 @@ color: #fff;
   word-wrap: break-word;
 }
 
+.hero .hero-img{
+  margin-right: -1000px;
+}
+
 .hero .btn-mulai {
   color: white;
   background: #2EB24D;
@@ -443,34 +447,34 @@ color: #fff;
   color: #FFBDA9;
 }
 
-.underline-container {
+.underline-container22 {
   position: absolute;
-  bottom: -38px; /* Adjust as necessary to position it under the text */
-  z-index: 1; /* Ensure Underline1 is on top */
+  bottom: -25px; /* Adjust this value as needed */
+  z-index: 1; /* Ensure Underline1 is above Underline2 */
 }
 
-.underline-container2 {
+.underline-container00 {
   position: absolute;
-  bottom: -28px; /* Adjust as necessary to position it under the first underline */
-  z-index: 1; /* Ensure Underline2 is below Underline1 */
+  bottom: -28px; /* Adjust this value as needed */
+  z-index: 0; /* Ensure Underline2 is below Underline1 */
 }
 
-.underline-img {
-  width: 300px; /* Adjust the width as needed */
+.underline-img22 {
+  width: 400px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
-  margin-left:150px;
+  margin-left: 80px; /* Adjust as necessary */
 }
 
-.underline-img2 {
-  margin-left:100px;
-  width: 350px; /* Adjust the width as needed */
+.underline-img00 {
+  width: 250px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
+  margin-left: 230px; /* Adjust as necessary */
 }
 
-.underline-text {
+.underline-text22 {
   display: inline-block;
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Ensure the text is above the underlines */
 }
 
 /* Swiper styles */
@@ -1298,7 +1302,7 @@ color: #fff;
 .footer-btn {
   position: absolute;
   top: -1px;
-  right: -4px;
+  right: -50px;
   bottom: -1px;
   border: 0;
   background: none;
@@ -1322,7 +1326,7 @@ color: #fff;
 }
 
 .container.copyright {
-  color: #6D706F;
+  color: black;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 20px;

@@ -196,7 +196,7 @@
 
 .custom-title h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
 }
 
@@ -541,7 +541,7 @@ img {
 
 .plant-image {
     max-width: 200px; 
-    max-height: 200px;
+    max-height: 250px;
     margin-right: 20px;
     border-radius: 10px;
 }
@@ -582,8 +582,8 @@ img {
 }
 
 .accordion-button:not(.collapsed) {
-    color: #28a745;
-    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745 !important;
+    background-color:#D5F0DB !important;
 }
 
 .accordion-item {
@@ -597,7 +597,7 @@ img {
 }
 
 .custom-divider {
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid #E3E3E3;
     margin: 10px 0;
 }
 
