@@ -30,7 +30,7 @@ function App() {
       <Route path="/informasi" Component={informasi}/>
       <Route path="/pengingat" Component={pengingat}/>
       <Route path="/testimoni" Component={Testimoni}/>
-      <Route path="/blog" Component={Blog_information}/>
+      <Route path="/blogb" Component={Blog_information}/>
       <Route path="/detail" Component={Blog_detail}/>
       <Route path="/upload" Component={Upload} />
       <Route path="/loading" Component={Loading} />

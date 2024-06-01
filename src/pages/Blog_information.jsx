@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../dist/css/d.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -31,6 +31,29 @@ import imgp9 from '../assets/blog/p9.png';
 const Blog_information = () => {
     const navigate = useNavigate(); 
     const [searchTerm, setSearchTerm] = useState('');
+
+    const [tipsContent, setTipsContent] = useState([]);
+
+    useEffect(() => {
+        fetchTipsContent();
+    }, []);
+
+    const fetchTipsContent = async () => {
+        try {
+            const response = await fetch('/tips');
+            if (!response.ok) {
+                throw new Error('Failed to fetch tips content');
+            }
+            const data = await response.json();
+            setTipsContent(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+
+
+
 
     const handleCardClick = () => {
         navigate('/detail'); 
@@ -129,8 +152,19 @@ const Blog_information = () => {
                             </Container>
                         </div>
                     </Tab>
+
                     <Tab eventKey="tips" title="Tips & Trick">
-                        <div>Tab content for Tips & Trick</div>
+                        <div>
+                            {tipsContent.map((content) => (
+                                <Card key={content.id} onClick={handleCardClick}>
+                                    <Card.Body>
+                                        <Card.Title></Card.Title>
+                                        <Card.Text>{content.kategori}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            ))}
+                        </div>
+                        
                     </Tab>
                     <Tab eventKey="diagnosa" title="Diagnosa">
                         <div>Tab content for Diagnosa</div>
