@@ -19,14 +19,14 @@ pool.getConnection((err, connection) => {
         return;
     }
     console.log('Connected to database:', connection.threadId);
-    connection.release(); // Release the connection back to the pool
+    connection.release(); 
 });
 
 export const testConnection = async () => {
     try {
         const connection = await pool.getConnection();
         console.log('Connected to database:', connection.threadId);
-        connection.release(); // Release the connection back to the pool
+        connection.release(); 
     } catch (error) {
         console.error('Database connection failed:', error);
     }

@@ -19,7 +19,7 @@ export const detectPlant = async (req, res) => {
   try {
     const { file } = req;
 
-    // Pastikan file telah diunggah dengan benar
+    // Untuk memastikan file telah diunggah dengan benar
     if (!file) {
       return res.status(400).json({ error: 'No file uploaded' });
     }
@@ -62,7 +62,7 @@ export const detectPlant = async (req, res) => {
   } catch (error) {
     console.error('Error during plant detection:', error);
 
-    // Log detailed error
+    // Log error
     if (error.response) {
       console.error('Response data:', error.response.data);
       console.error('Response status:', error.response.status);
