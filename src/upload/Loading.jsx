@@ -1,58 +1,58 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Underline1 from '../assets/Vector 1.png';
+import Underline2 from '../assets/Vector 2.png';
 import img5 from '../assets/unggah.png';
 import img6 from '../assets/loading.png';
 import img7 from '../assets/hasil.png';
-import { Spinner } from 'react-bootstrap';
-import Underline1 from '../assets/Vector 1.png';
-import Underline2 from '../assets/Vector 2.png';
 
 const Loading = () => {
-  const [percentage, setPercentage] = useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { data } = location.state || {}; 
+
+  const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setPercentage(prev => {
-        if (prev < 100) {
-          return prev + 1;
-        } else {
-          clearInterval(interval);
-          return prev;
-        }
-      });
-    }, 100); 
+    if (data) {
+      const interval = setInterval(() => {
+        setPercentage(prev => {
+          if (prev >= 100) {
+            clearInterval(interval);
+            navigate('/result', { state: { data } }); 
+            return 100;
+          }
+          return prev + 1; 
+        });
+      }, 10); 
 
-    const timer = setTimeout(() => {
-      navigate('/result');
-    }, 5000); 
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timer);
-    };
-  }, [navigate]);
-
+      return () => clearInterval(interval); 
+    } else {
+      console.error('No data passed to Loading component');
+    }
+  }, [data, navigate]);
 
   return (
     <div>
       <header className="upload">
-      <div className="judul">
-          <h1 className="underline-text">Diagnosa penyakit <br/> pada tanaman anda
-          <div className="underline-container move-right">
+        <div className="judul">
+          <h1 className="underline-text">
+            Diagnosa penyakit <br /> pada tanaman anda
+            <div className="underline-container move-right">
               <img src={Underline1} alt="underline" className="underline-img" />
             </div>
             <div className="underline-container2 move-right2">
-            <img src={Underline2} alt="underline" className="underline-img2" />
+              <img src={Underline2} alt="underline" className="underline-img2" />
             </div>
           </h1>
-          <p>Unggah foto tanaman anda kedalam kotak dan dapatkan <br/> informasi penyakit tentang tanaman tersebut</p>
+          <p>Unggah foto tanaman anda kedalam kotak dan dapatkan <br /> informasi penyakit tentang tanaman tersebut</p>
         </div>
 
         <div className="upload-card">
           <div className="card text-center">
             <div className="card-body">
-              <div className="spinner-container" style={{ position: 'relative' }}>
+              <div className="spinner-container" style={{ position: 'relative', width: '100px', height: '100px', margin: 'auto' }}>
                 <Spinner animation="border" role="status" variant="success" style={{ width: '100px', height: '100px' }}>
                   <span className="visually-hidden">Loading...</span>
                 </Spinner>
@@ -62,7 +62,8 @@ const Loading = () => {
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
                   fontSize: '20px',
-                  color: 'green'
+                  fontWeight: 'bold',
+                  color: 'green',
                 }}>
                   {percentage}%
                 </div>
@@ -91,15 +92,17 @@ const Loading = () => {
         </div>
       </div>
 
-    {/* STEP 2 */}
-    <div className="custom-title-container2">
+      {/* STEP 2 */}
+      <div className="custom-title-container2">
         <div className="content-container2">
           <img src={img6} alt="Foto Tanaman" />
         </div>
         <div className="custom-titlex2">
           <div className="title-container2">
             <div className="step-text2">STEP 2</div>
-            <h1>Bersantai! Biarkan sistem <br /> kami bekerja untuk anda</h1>
+            <h1>
+              Bersantai! Biarkan sistem <br /> kami bekerja untuk anda
+            </h1>
             <p>AI kami akan bekerja secara cepat dan efisien untuk mendianogsa <br /> penyakit yang ada pada tanaman anda</p>
           </div>
         </div>
@@ -110,14 +113,14 @@ const Loading = () => {
         <div className="step-text">STEP 3</div>
         <div className="custom-titlex3">
           <div className="title-container">
-            <h1>Voila! Hasil dari tanaman <br /> anda akan muncul dan <br/> siap untuk anda baca</h1>
-            <p>Anda akan mendapatkan detail dari penyakit tanaman anda dengan <br /> jelas, beserta dengna cara penanganannya</p>
+            <h1>Voila! Hasil dari tanaman <br /> anda akan muncul dan <br /> siap untuk anda baca</h1>
+            <p>Anda akan mendapatkan detail dari penyakit tanaman anda dengan <br /> jelas, beserta dengan cara penanganannya</p>
           </div>
           <img src={img7} alt="hasil" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Loading;

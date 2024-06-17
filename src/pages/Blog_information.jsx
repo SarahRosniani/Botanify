@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../dist/css/d.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -60,10 +60,10 @@ const Blog_information = () => {
     };
 
     const blogs = [
-        { id: 1, img: img, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
-        { id: 2, img: img2, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp2, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
-        { id: 3, img: img3, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp3, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
-        { id: 4, img: img4, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp4, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
+        { id: 1, img: img, title: 'Cara mudah untuk merawat tanaman anda', text: 'Sangat dipastikan, kita ingin melihat taman yang ada dirumah kita bersih dan indah. Susnue.', profileImg: imgp, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
+        { id: 2, img: img2, title: '5 Cara Mudah Rawat Tanaman Indoor, Biar Nggak Layu', text: 'Berikut trik dan tips merawat tanaman Indoor agar tidak layu dan mati. Sus.', profileImg: imgp2, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
+        { id: 3, img: img3, title: '13 Cara mengatasi tanaman dari hama', text: 'Usahakan untuk menggunakan media tanam yang sesuai,Suspendisse varius enim in eros.', profileImg: imgp3, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
+        { id: 4, img: img4, title: 'Tanaman Hias Indor Hits', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp4, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
         { id: 5, img: img5, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp5, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
         { id: 6, img: img6, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp6, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
         { id: 7, img: img7, title: 'Cara mudah untuk merawat tanaman anda', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.', profileImg: imgp7, author: 'Danica A.', date: '11 Jan 2022', readTime: '5 min read' },
