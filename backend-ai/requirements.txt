@@ -1,0 +1,7 @@
+numpy
+Pillow
+flask
+flask_cors
+requests
+python-dotenv
+mysql-connector-python
