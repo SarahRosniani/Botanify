@@ -86,6 +86,7 @@
     width: 48px;
     height: 48px;
     border-radius: 99px;
+    margin-left: -55px;
 }
 
 .author-name {
@@ -291,6 +292,7 @@ ini isi container card nya yg di infoormasi lain
     font-weight: 600;
     line-height: 20px;
     word-wrap: break-word;
+    margin-left: -55px;
 }
 
 .containerblogin {
@@ -303,7 +305,6 @@ ini isi container card nya yg di infoormasi lain
     display: flex;
     justify-content: flex-start;
     align-items: left;
-    gap: 2px;
     flex-direction: column;
 }
 
@@ -336,21 +337,30 @@ ini isi container card nya yg di infoormasi lain
 
 .card-body-custom1 {
     height: auto;
-    width: 250px;
+    width: 300px;
   }
 
   .card-text-left1 {
     text-align: left !important;
-    margin-left: -17px;
+    margin-left: -55px;
 }
+
+.containerblog1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
 
 .custom-card-img2 {
     width: 100%; 
-    height: 200px; 
-    margin-top: -80px;
-    object-fit: cover; 
+    height: 150px; 
+    margin-top: -60px; 
+    margin-left: -7px;
   }
 
   .card-title2{
-    margin-left: -17px;
+    margin-left: -55px;
+    font-size: 20px;
   }
+
+  

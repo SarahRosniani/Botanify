@@ -273,7 +273,7 @@
 .card-container {
   display: flex;
   transform: translateX(35px); 
-  width: 350px;       /* Sets the width of the container to 50px */
+  width: 360px;       /* Sets the width of the container to 50px */
   height: 380px;
 }
 

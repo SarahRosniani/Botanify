@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../dist/css/d.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -29,9 +30,8 @@ import imgp8 from '../assets/blog/p8.png';
 import imgp9 from '../assets/blog/p9.png';
 
 const Blog_information = () => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
-
     const [tipsContent, setTipsContent] = useState([]);
 
     useEffect(() => {
@@ -40,23 +40,18 @@ const Blog_information = () => {
 
     const fetchTipsContent = async () => {
         try {
-            const response = await fetch('/tips');
-            if (!response.ok) {
+            const response = await axios.get('http://localhost:3000/informasi');
+            if (response.status !== 200) {
                 throw new Error('Failed to fetch tips content');
             }
-            const data = await response.json();
-            setTipsContent(data);
+            setTipsContent(response.data);
         } catch (error) {
             console.error(error);
         }
     };
 
-
-
-
-
     const handleCardClick = () => {
-        navigate('/detail'); 
+        navigate('/detail');
     };
 
     const blogs = [
@@ -78,6 +73,14 @@ const Blog_information = () => {
     const filteredBlogs = blogs.filter(blog =>
         blog.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const truncateText = (text, maxWords) => {
+        const words = text.split(' ');
+        if (words.length > maxWords) {
+            return words.slice(0, maxWords).join(' ') + '...';
+        }
+        return text;
+    };
 
     return (
         <div>
@@ -130,7 +133,7 @@ const Blog_information = () => {
                                                 <Card.Body className="card-body-custom1">
                                                     <div className="tips-trick">Tips & Trick</div>
                                                     <Card.Title className="card-titlez">{blog.title}</Card.Title>
-                                                    <Card.Text className="card-textz">{blog.text}</Card.Text>
+                                                    <Card.Text className="card-textz">{truncateText(blog.text, 20)}</Card.Text>
                                                     <div className="containerblog1">
                                                         <img className="profile-img" src={blog.profileImg} alt="profile" />
                                                         <div className='metadata1'>
@@ -145,7 +148,6 @@ const Blog_information = () => {
                                                 </Card.Body>
                                             </Card>
                                             </div>
-
                                         </Col>
                                     ))}
                                 </Row>
@@ -155,30 +157,54 @@ const Blog_information = () => {
 
                     <Tab eventKey="tips" title="Tips & Trick">
                         <div>
-                            {tipsContent.map((content) => (
-                                <Card key={content.id} onClick={handleCardClick}>
-                                    <Card.Body>
-                                        <Card.Title></Card.Title>
-                                        <Card.Text>{content.kategori}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            ))}
-                        </div>
-                        
-                    </Tab>
-                    <Tab eventKey="diagnosa" title="Diagnosa">
-                        <div>Tab content for Diagnosa</div>
-                    </Tab>
-                    <Tab eventKey="penyakit" title="Penyakit">
-                        <div>Tab content for Penyakit</div>
-                    </Tab>
-                    <Tab eventKey="acara" title="Acara">
-                        <div>Tab content for Acara</div>
-                    </Tab>
-                </Tabs>
-            </section>
-        </div>
-    );
+                            <Container>
+                                <Row>
+                                    {tipsContent
+                                        .filter(content => content.kategori === 'Tips & Trick')
+                                        .map((content) => (
+                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                        <div className="card-container">
+                                        <Card onClick={handleCardClick} className="custom-card">
+                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                            <Card.Body className="card-body-custom1">
+                                                <div className="tips-trick">{content.kategori}</div>
+                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
+                                                <div className="containerblog1">
+                                                    <img className="profile-img" src={content.profileImg} alt="profile" />
+                                                    <div className='metadata1'>
+                                                        <div className="author-nameblog">{content.penerbit}</div>
+                                                        <div className="metadata-container">
+                                                            <div className="date">{content.date}</div>
+                                                            <div className="divider1"></div>
+                                                            <div className="read-time">{content.readTime}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                        </div>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Container>
+                    </div>
+                </Tab>
+
+                <Tab eventKey="diagnosa" title="Diagnosa">
+                    <div>Tab content for Diagnosa</div>
+                </Tab>
+                <Tab eventKey="penyakit" title="Penyakit">
+                    <div>Tab content for Penyakit</div>
+                </Tab>
+                <Tab eventKey="acara" title="Acara">
+                    <div>Tab content for Acara</div>
+                </Tab>
+            </Tabs>
+        </section>
+    </div>
+);
 }
 
 export default Blog_information;
+

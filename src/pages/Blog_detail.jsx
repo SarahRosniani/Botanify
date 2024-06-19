@@ -16,7 +16,7 @@ const BlogDetail = () => {
         <div className="blog-detail">
             <div className="title-section">
                 <div className="title">
-                    <a href="/blog" className="blog-category">Blog</a>
+                    <a href="/blogb" className="blog-category">Blog</a>
                     <i className="bi bi-chevron-right small-icon"></i>
                     <div className="post-title">Tips & Trick</div>
                     <i className="bi bi-chevron-right small-icon"></i>
@@ -77,6 +77,7 @@ const BlogDetail = () => {
                 <Container>
                 <Row>
                                     <Col md={4} className="mb-3">
+                                    <div className="card-container">
                                         <Card>
                                             <Card.Img variant="top" src={img}  className="custom-card-img2" />
                                             <Card.Body className="card-body-custom1">
@@ -97,8 +98,10 @@ const BlogDetail = () => {
                                                 </div>
                                             </Card.Body>
                                         </Card>
+                                    </div>
                                     </Col>
                                     <Col md={4} className="mb-3">
+                                    <div className="card-container">
                                         <Card>
                                             <Card.Img variant="top" src={img2} className="custom-card-img2"  />
                                             <Card.Body className="card-body-custom1">
@@ -118,8 +121,10 @@ const BlogDetail = () => {
                                                 </div>
                                             </Card.Body>
                                         </Card>
+                                    </div>
                                     </Col>
                                     <Col md={4} className="mb-3">
+                                    <div className="card-container">
                                         <Card>
                                             <Card.Img variant="top" src={img3}  className="custom-card-img2" />
                                             <Card.Body className="card-body-custom1">
@@ -139,6 +144,7 @@ const BlogDetail = () => {
                                                 </div>
                                             </Card.Body>
                                         </Card>
+                                    </div>
                                     </Col>
                                 </Row>
                 </Container>
