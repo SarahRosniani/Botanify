@@ -1,152 +1,163 @@
-import '../dist/css/dt.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import img from '../assets/blog/1.png';
-import img2 from '../assets/blog/bunga3.png';
-import img3 from '../assets/blog/bunga2.png';
-import imgp2 from '../assets/blog/p2.png';
-import imgp3 from '../assets/blog/p3.png';
 import imgp from '../assets/blog/p1.png';
 
-
 const BlogDetail = () => {
+    const { id_informasi } = useParams();
+    const navigate = useNavigate();
+    const [blogContent, setBlogContent] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [tipsContent, setTipsContent] = useState([]);
+
+    useEffect(() => {
+        fetchBlogContent();
+        fetchTipsContent();
+    }, [id_informasi]);
+
+    const fetchBlogContent = async () => {
+        try {
+            const response = await axios.get(`http://localhost:3000/informasi/${id_informasi}`);
+            if (response.status !== 200) {
+                throw new Error('Failed to fetch blog detail');
+            }
+            console.log('Blog Content:', response.data.data);
+            setBlogContent(response.data.data);
+            setLoading(false);
+        } catch (error) {
+            setError(error.message);
+            setLoading(false);
+        }
+    };
+
+    const fetchTipsContent = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/informasi');
+            if (response.status !== 200) {
+                throw new Error('Failed to fetch tips content');
+            }
+            console.log('Tips Content:', response.data);
+            const firstThreeItems = response.data.slice(0, 3);
+            setTipsContent(firstThreeItems);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    const handleCardClick = (id) => {
+        navigate(`/detail/${id}`);
+    };
+
     return (
         <div className="blog-detail">
-            <div className="title-section">
-                <div className="title">
-                    <a href="/blogb" className="blog-category">Blog</a>
-                    <i className="bi bi-chevron-right small-icon"></i>
-                    <div className="post-title">Tips & Trick</div>
-                    <i className="bi bi-chevron-right small-icon"></i>
-                    <div className="post-title1">Cara mudah untuk merawat tanaman anda</div>
-                </div>
-            </div>
-            <h1>Cara mudah untuk merawat tanaman anda</h1>
-            <div className="containerd">
-                <img className="profile-img" src={imgp} alt="Author" />
-                <div className="content-flex">
-                    <div className="metadata">
-                        <div className="author-name">Danica A.</div>
-                        <div className="metadata-container">
-                            <div className="date">11 Jan 2022</div>
-                            <div className="divider"></div>
-                            <div className="read-time">5 min read</div>
+            {blogContent && (
+                <React.Fragment key={blogContent.id_informasi}>
+                    <div className="title-section">
+                        <div className="title">
+                            <a href="/blogb" className="blog-category">Blog</a>
+                            <i className="bi bi-chevron-right small-icon"></i>
+                            <div className="post-title">{blogContent.kategori}</div>
+                            <i className="bi bi-chevron-right small-icon"></i>
+                            <div className="post-title1">{blogContent.judul}</div>
                         </div>
                     </div>
-                    <div className="social-links1 d-flex">
-                        <a href="#"><i className="bi bi-link-45deg"></i></a>
-                        <a href="#"><i className="bi bi-linkedin"></i></a>
-                        <a href="#"><i className="bi bi-twitter-x"></i></a>
-                        <a href="#"><i className="bi bi-facebook"></i></a>
+                    <h1>{blogContent.judul}</h1>
+                    <div className="containerd">
+                        <img className="profile-img" src={imgp} alt="Author" />
+                        <div className="content-flex">
+                            <div className="metadata">
+                                <div className="author-name">{blogContent.penerbit}</div>
+                                <div className="metadata-container">
+                                    <div className="date">{blogContent.tanggal}</div>
+                                    <div className="divider"></div>
+                                    <div className="read-time">{blogContent.waktu_baca} 5 min read</div>
+                                </div>
+                            </div>
+                            <div className="social-links1 d-flex">
+                                <a href="#"><i className="bi bi-link-45deg"></i></a>
+                                <a href="#"><i className="bi bi-linkedin"></i></a>
+                                <a href="#"><i className="bi bi-twitter-x"></i></a>
+                                <a href="#"><i className="bi bi-facebook"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <img className="custom-image" src={img2} alt="Custom" />
+                    <img className="custom-image" src={blogContent.foto_informasi} alt="Custom" />
 
-            <div className='blog-container'>
-                <div className="introduction">Cara merawat tanaman</div>
-                <p>Sangat dipastika, kita ingin melihat taman yang ada dirumah kita bersih dan indah. Factor keindahan dari sebuah taman adalah dari tanaman atau tumbuhanya. Maka dari itu kita harus memperhatikan kondisi tanaman tersebut agar tidak mati dan bisa tetap tumbuh.</p>
-                <p>Dengan matinya tanaman pada taman rumah, membuat rumah menjadi tidak indah lagi. Biasanya tanaman yang mati itu karena perawatanya tidak tepat. Sehingga membuat tanaman menjadi mati dan layu.</p>
-                <p>Sinar matahari sangat berguna dan wajib bagi tanaman pada taman, karena dengan adanya matahari membuat tanaman bisa melakukan fotosintetis. Dengan adanya proses fotosintetis, maka tanaman dapat menghasilkan oksigen yang banyak dan baik.</p>
-                <p>Maka dari itu kita harus mencukupi kebutuhan sinar matahari pada taman. Pemberian sinar matahari pun akan berbeda tiap jenis tanamanya, untuk tanaman hias memerlukan 4-6 jam setiap harinya dan untuk sayur dan buah-buahan minimal 6 jam perharinya.</p>
+                    <div className='blog-container'>
+                    <div className="introduction">{blogContent.judul}</div>
+                    <p>{blogContent.isi_artikel}</p>
+                    {blogContent.isi_artikel.substring(0, 195).split('. ').map((paragraph, index) => (
+                        <p key={index}>{paragraph}.</p>
+                    ))}
 
-                <div className="image-container">
-                    <img className="image-detail" src={img3} alt="Placeholder Image" />
-                    <div className="text-container">
+                    <div className="image-container">
+                        <img className="image-detail" src={blogContent.foto_informasi} alt="Placeholder Image" />
+                        <div className="text-container">
                         <div className="vertical-line"></div>
-                        <div className="text">tanaman-hias</div>
+                        <div className="text">{blogContent.kategori}</div>
+                        </div>
                     </div>
-                </div>
 
-                <div className='styled-text'>Menjaga Kelembapan Tanaman</div>
-                <p>Pemilihan tanaman pada taman juga harus memperhatikan kondisi cuaca dan kelembaban area tersebut, maka dari itu dengan menjaga cuaca dan kelembaban yang pas, maka membuat tanaman menjadi lebih susah layu.</p>
-                <p>Kita harus menanam tanaman dengan memperhatikan daerah kita, jika daerah kita berada di dataran rendah maka jangan menanam tanaman yang beriklim subtropics atau tanaman dataran tinggi.</p>
+                    <div className="styled-text">{blogContent.isi_artikel.substring(195, 210).split(' ').slice(0, 10).join(' ')}</div>
+                    {blogContent.isi_artikel.substring(210,909).split('. ').map((paragraph, index) => (
+                    <p key={index}>{paragraph}.</p>
+                    ))}
 
-                <div className='text2'>Terakhir!</div>
-                <p>Pada umumnya, setiap jenis tanaman membutuhkan air untuk kelangsungan hidupnya. Dengan adanya air juga membuat tanaman menjadi lebih sehat dan tidak kering. Tetapi kebutuhan air pada setiap jenis tanaman itu berbeda-beda.</p>
-                <p>rawatlah tanaman kalian mulai sekarang, agar selalu sehat </p>
-            </div>
+                    <div className='text2'>Terakhir!</div>
+                   <p>{blogContent.isi_artikel.substring(909) + '.'}</p>
+
+                    </div>
+                </React.Fragment>
+            )}
 
             <div className='container-info'>
                 <div className='text3'>Informasi Lainnya</div>
-                <p>Informasi lainnya tentang tanaman yang mungkin anda butuhkan</p>
+                <p>Informasi lainnya tentang tanaman yang mungkin Anda butuhkan</p>
 
                 <Container>
-                <Row>
-                                    <Col md={4} className="mb-3">
-                                    <div className="card-container">
-                                        <Card>
-                                            <Card.Img variant="top" src={img}  className="custom-card-img2" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">Tips & Trick</div>
-                                                <Card.Title className="card-title2">Cara mudah untuk merawat tanaman anda</Card.Title>
-                                                <Card.Text className='card-text-left1'>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">Danica A.</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">11 Jan 2022</div>
-                                                            <div className="divider"></div>
-                                                            <div className="read-time">5 min read</div>
+                    <Row>
+                        {tipsContent
+                            .filter(content => content.id_informasi !== id_informasi)
+                            .map((content) => (
+                                <Col md={4} key={content.id_informasi}>
+                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                        <Card.Body className="card-body-custom1">
+                                            <div className="tips-trick">Tips & Trick</div>
+                                            <Card.Title className="card-title2">{content.judul}</Card.Title>
+                                            <Card.Text className='card-text-left1'>
+                                                {content.isi_artikel.substring(0, 100)}...
+                                            </Card.Text>
+                                            <div className="containerblog1">
+                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                <div className='metadata1'>
+                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                    <div className="metadata-container">
+                                                        <div className="date">{content.tanggal}</div>
+                                                        <div className="divider"></div>
+                                                        <div className="read-time">{content.waktu_baca}</div>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    </Col>
-                                    <Col md={4} className="mb-3">
-                                    <div className="card-container">
-                                        <Card>
-                                            <Card.Img variant="top" src={img2} className="custom-card-img2"  />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">Tips & Trick</div>
-                                                <Card.Title className="card-title2">Cara mudah untuk merawat tanaman anda</Card.Title>
-                                                <Card.Text className='card-text-left1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp2} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">Danica A.</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">11 Jan 2022</div>
-                                                            <div className="divider"></div>
-                                                            <div className="read-time">5 min read</div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    </Col>
-                                    <Col md={4} className="mb-3">
-                                    <div className="card-container">
-                                        <Card>
-                                            <Card.Img variant="top" src={img3}  className="custom-card-img2" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">Tips & Trick</div>
-                                                <Card.Title className="card-title2">Cara mudah untuk merawat tanaman anda</Card.Title>
-                                                <Card.Text className='card-text-left1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp3} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">Danica A.</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">11 Jan 2022</div>
-                                                            <div className="divider"></div>
-                                                            <div className="read-time">5 min read</div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    </Col>
-                                </Row>
+                                            </div>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))}
+                    </Row>
                 </Container>
             </div>
         </div>

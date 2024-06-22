@@ -31,7 +31,7 @@ function App() {
       <Route path="/pengingat" Component={pengingat}/>
       <Route path="/testimoni" Component={Testimoni}/>
       <Route path="/blogb" Component={Blog_information}/>
-      <Route path="/detail" Component={Blog_detail}/>
+      <Route path="/detail/:id_informasi" Component={Blog_detail}/>
       <Route path="/upload" Component={Upload} />
       <Route path="/loading" Component={Loading} />
       <Route path="/result" Component={Result} />

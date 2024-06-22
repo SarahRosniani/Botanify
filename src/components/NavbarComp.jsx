@@ -17,7 +17,7 @@ const NavbarComp = () => {
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/blog" className="nav-link-custom">Informasi</Nav.Link>
+            <Nav.Link href="/blogb" className="nav-link-custom">Informasi</Nav.Link>
             <Nav.Link href="#link" className="nav-link-custom">Kontak</Nav.Link>
           </Nav>
           <div className="navbar-button">
