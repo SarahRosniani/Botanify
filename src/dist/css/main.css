@@ -1127,6 +1127,7 @@ color: #fff;
     font-weight: 600;
     line-height: 24px;
     word-wrap: break-word;
+    text-decoration: none;
   }
   
   .instruction-text {
