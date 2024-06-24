@@ -36,12 +36,10 @@ const Blog_information = () => {
     const handleCardClick = (id_informasi) => {
         navigate(`/detail/${id_informasi}`);
     };
-    
 
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
-
 
     const truncateText = (text, maxWords) => {
         const words = text.split(' ');
@@ -57,69 +55,69 @@ const Blog_information = () => {
                 <div className="container">
                     <div className="row gy-8">
                         <div className="flex-column">
-                            <h1 className="">Tambah wawasan anda 
-                            <div className="underline-containerblog1">
-                                <img src={Underline1} alt="underline" className="underline-img22" />
+                            <h1 className="">Tambah wawasan anda
+                                <div className="underline-containerblog1">
+                                    <img src={Underline1} alt="underline" className="underline-img22" />
                                 </div>
                                 <div className="underline-containerblog2">
-                                <img src={Underline2} alt="underline" className="underline-img00" />
-                            </div>
-                            tentang tanaman hias</h1>
+                                    <img src={Underline2} alt="underline" className="underline-img00" />
+                                </div>
+                                tentang tanaman hias</h1>
                             <p className="">Pelajari lebih dalam tentang tanaman anda dan cara merawat tanaman dengan benar</p>
                         </div>
                         <div className="container">
-                        <div className="headerb">
-                            <form className="search-form">
-                                <i className="bi bi-search icon"></i>
-                                <input 
-                                    type="text" 
-                                    placeholder="Cari informasi" 
-                                    className="text" 
-                                    value={searchTerm}
-                                    onChange={handleSearch}
-                                />
-                            </form>
-                        </div>
+                            <div className="headerb">
+                                <form className="search-form">
+                                    <i className="bi bi-search icon"></i>
+                                    <input
+                                        type="text"
+                                        placeholder="Cari informasi"
+                                        className="text"
+                                        value={searchTerm}
+                                        onChange={handleSearch}
+                                    />
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section className='blog1 section'>
-                <Tabs 
-                    defaultActiveKey="lihat" 
+                <Tabs
+                    defaultActiveKey="lihat"
                     transition={false}
-                    id="noanim-tab-example" 
+                    id="noanim-tab-example"
                     className="mb-3 custom-tabs">
                     <Tab eventKey="lihat" title="Lihat Semua">
                         <div>
                             <Container>
                                 <Row>
-                                {tipsContent
+                                    {tipsContent
                                         .map((content) => (
-                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
-                                        <div className="card-container">
-                                        <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
-                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">{content.kategori}</div>
-                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
-                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">{content.penerbit}</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">{content.tanggal}</div>
-                                                            <div className="divider1"></div>
-                                                            <div className="read-time">{content.readTime}</div>
-                                                        </div>
-                                                    </div>
+                                            <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                                <div className="card-container">
+                                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                                        <Card.Body className="card-body-custom1">
+                                                            <div className="tips-trick">{content.kategori}</div>
+                                                            <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                            <Card.Text className="card-textz">{truncateText(content.isi_artikel, 10)}</Card.Text>
+                                                            <div className="containerblog1">
+                                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                                <div className='metadata1'>
+                                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                                    <div className="metadata-container">
+                                                                        <div className="date">{content.tanggal}</div>
+                                                                        <div className="divider1"></div>
+                                                                        <div className="read-time">{content.readTime}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </div>
-                                            </Card.Body>
-                                        </Card>
-                                        </div>
-                                    </Col>
-                                ))}
+                                            </Col>
+                                        ))}
                                 </Row>
                             </Container>
                         </div>
@@ -132,142 +130,145 @@ const Blog_information = () => {
                                     {tipsContent
                                         .filter(content => content.kategori === 'Tips & Trick')
                                         .map((content) => (
-                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
-                                        <div className="card-container">
-                                        <Card onClick={handleCardClick} className="custom-card">
-                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">{content.kategori}</div>
-                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
-                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">{content.penerbit}</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">{content.tanggal}</div>
-                                                            <div className="divider1"></div>
-                                                            <div className="read-time">{content.readTime}</div>
-                                                        </div>
-                                                    </div>
+                                            <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                                <div className="card-container">
+                                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                                        <Card.Body className="card-body-custom1">
+                                                            <div className="tips-trick">{content.kategori}</div>
+                                                            <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                            <Card.Text className="card-textz">{truncateText(content.isi_artikel, 10)}</Card.Text>
+                                                            <div className="containerblog1">
+                                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                                <div className='metadata1'>
+                                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                                    <div className="metadata-container">
+                                                                        <div className="date">{content.tanggal}</div>
+                                                                        <div className="divider1"></div>
+                                                                        <div className="read-time">{content.readTime}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </div>
-                                            </Card.Body>
-                                        </Card>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Container>
-                    </div>
-                </Tab>
+                                            </Col>
+                                        ))}
+                                </Row>
+                            </Container>
+                        </div>
+                    </Tab>
 
-                <Tab eventKey="diagnosa" title="Diagnosa">
-                    <div><Container>
+                    <Tab eventKey="diagnosa" title="Diagnosa">
+                        <div>
+                            <Container>
                                 <Row>
                                     {tipsContent
                                         .filter(content => content.kategori === 'Diagnosa')
                                         .map((content) => (
-                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
-                                        <div className="card-container">
-                                        <Card onClick={handleCardClick} className="custom-card">
-                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">{content.kategori}</div>
-                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
-                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">{content.penerbit}</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">{content.tanggal}</div>
-                                                            <div className="divider1"></div>
-                                                            <div className="read-time">{content.readTime}</div>
-                                                        </div>
-                                                    </div>
+                                            <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                                <div className="card-container">
+                                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                                        <Card.Body className="card-body-custom1">
+                                                            <div className="tips-trick">{content.kategori}</div>
+                                                            <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                            <Card.Text className="card-textz">{truncateText(content.isi_artikel, 10)}</Card.Text>
+                                                            <div className="containerblog1">
+                                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                                <div className='metadata1'>
+                                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                                    <div className="metadata-container">
+                                                                        <div className="date">{content.tanggal}</div>
+                                                                        <div className="divider1"></div>
+                                                                        <div className="read-time">{content.readTime}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </div>
-                                            </Card.Body>
-                                        </Card>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Container>
+                                            </Col>
+                                        ))}
+                                </Row>
+                            </Container>
                         </div>
-                </Tab>
-                <Tab eventKey="penyakit" title="Penyakit">
-                    <div><Container>
+                    </Tab>
+
+                    <Tab eventKey="penyakit" title="Penyakit">
+                        <div>
+                            <Container>
                                 <Row>
                                     {tipsContent
                                         .filter(content => content.kategori === 'Penyakit')
                                         .map((content) => (
-                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
-                                        <div className="card-container">
-                                        <Card onClick={handleCardClick} className="custom-card">
-                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">{content.kategori}</div>
-                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
-                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">{content.penerbit}</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">{content.tanggal}</div>
-                                                            <div className="divider1"></div>
-                                                            <div className="read-time">{content.readTime}</div>
-                                                        </div>
-                                                    </div>
+                                            <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                                <div className="card-container">
+                                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                                        <Card.Body className="card-body-custom1">
+                                                            <div className="tips-trick">{content.kategori}</div>
+                                                            <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                            <Card.Text className="card-textz">{truncateText(content.isi_artikel, 10)}</Card.Text>
+                                                            <div className="containerblog1">
+                                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                                <div className='metadata1'>
+                                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                                    <div className="metadata-container">
+                                                                        <div className="date">{content.tanggal}</div>
+                                                                        <div className="divider1"></div>
+                                                                        <div className="read-time">{content.readTime}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </div>
-                                            </Card.Body>
-                                        </Card>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Container>
+                                            </Col>
+                                        ))}
+                                </Row>
+                            </Container>
                         </div>
-                </Tab>
-                <Tab eventKey="acara" title="Acara">
-                    <div><Container>
+                    </Tab>
+                    <Tab eventKey="acara" title="Acara">
+                        <div>
+                            <Container>
                                 <Row>
                                     {tipsContent
                                         .filter(content => content.kategori === 'Acara')
                                         .map((content) => (
-                                        <Col md={6} lg={4} className="mb-3" key={content.id}>
-                                        <div className="card-container">
-                                        <Card onClick={handleCardClick} className="custom-card">
-                                            <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
-                                            <Card.Body className="card-body-custom1">
-                                                <div className="tips-trick">{content.kategori}</div>
-                                                <Card.Title className="card-titlez">{content.judul}</Card.Title>
-                                                <Card.Text className="card-textz">{truncateText(content.isi_artikel, 20)}</Card.Text>
-                                                <div className="containerblog1">
-                                                    <img className="profile-img" src={imgp} alt="profile" />
-                                                    <div className='metadata1'>
-                                                        <div className="author-nameblog">{content.penerbit}</div>
-                                                        <div className="metadata-container">
-                                                            <div className="date">{content.tanggal}</div>
-                                                            <div className="divider1"></div>
-                                                            <div className="read-time">{content.readTime}</div>
-                                                        </div>
-                                                    </div>
+                                            <Col md={6} lg={4} className="mb-3" key={content.id}>
+                                                <div className="card-container">
+                                                    <Card onClick={() => handleCardClick(content.id_informasi)} className="custom-card">
+                                                        <Card.Img variant="top" src={content.foto_informasi} className="custom-card-img" />
+                                                        <Card.Body className="card-body-custom1">
+                                                            <div className="tips-trick">{content.kategori}</div>
+                                                            <Card.Title className="card-titlez">{content.judul}</Card.Title>
+                                                            <Card.Text className="card-textz">{truncateText(content.isi_artikel, 10)}</Card.Text>
+                                                            <div className="containerblog1">
+                                                                <img className="profile-img" src={imgp} alt="profile" />
+                                                                <div className='metadata1'>
+                                                                    <div className="author-nameblog">{content.penerbit}</div>
+                                                                    <div className="metadata-container">
+                                                                        <div className="date">{content.tanggal}</div>
+                                                                        <div className="divider1"></div>
+                                                                        <div className="read-time">{content.readTime}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </div>
-                                            </Card.Body>
-                                        </Card>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Container>
+                                            </Col>
+                                        ))}
+                                </Row>
+                            </Container>
                         </div>
-                </Tab>
-            </Tabs>
-        </section>
-    </div>
-);
+                    </Tab>
+                </Tabs>
+            </section>
+        </div>
+    );
 }
 
 export default Blog_information;
-
