@@ -14,7 +14,7 @@ const Scan = () => {
                 <div className="container1">
                     <div className="upload-section">
                         <div className="upload-button">
-                            <div className="button-text">Unggah Foto</div>
+                        <a href="/upload" className="button-text">Unggah Foto</a>
                         </div>
                         <div className="instruction-text">Unggah foto tanaman anda</div>
                     </div>
